@@ -1,15 +1,15 @@
-import 'mysql';
+const mysql = require('mysql');
 //connection
 const conn= mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "",
-    database: ""
+    password: ""
+    // database: ""
 });
 
 //Connection
-conn.Connect(function(err){
+conn.connect(function(err){
 if (err) throw err;
 //else do database things
-
+console.log("Connection complete");
 });
