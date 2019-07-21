@@ -13,4 +13,10 @@ conn.connect(function(err){
 if (err) throw err;
 //else do database things
 console.log("Connection complete");
+
+//create database
+conn.query("CREATE DATABASE nodeSQL", function(err,result){
+    if (err) throw err;
+    console.log("database created!");
+})
 });
